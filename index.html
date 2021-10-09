@@ -16,6 +16,38 @@
     <title>CLASS</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Student:</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="img" class="form-label">Upload Student Image URL</label>
+                <input placeholder="image.com" type="url" class="form-control" id="imageurl" aria-describedby="text">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Student Name:</label>
+                <input  type="text" class="form-control" id="studentname" aria-describedby="text">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Enter Student Register Number:</label>
+                <input placeholder="eg.2122*******46" type="number" class="form-control" id="registernumber">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- navbar -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +79,7 @@
             </ul>
           </div>
           <div class="Attendence">
-            <button type="button" class="btn btn-primary"><i class="bi bi-person-plus mr-2"></i>Add Student</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-plus mr-2"></i>Add Student</button>
           </div>
         </div>
       </nav>
@@ -110,94 +142,6 @@
                 <h5 class="card-title">B.Hemnath</h5>
                 <h3>212219040046</h3>
                 <span id="present" style="display: none;" class="badge bg-success">Present</span>
-                <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
-              </div>
-              <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
-                <div>
-                  <button onclick="Present()"  type="button" class="btn btn-outline-success btn-sm">Present</button>
-                  <button onclick="Absent()"  type="button" class="btn btn-outline-danger btn-sm">Absent</button>
-                </div>
-                <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
-              <div class="card-header bg-transparen d-flex justify-content-end border-success ">
-                <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
-              </div>
-              <div class="card-body">
-                <img style="width: 50px; height: 50px;" src="assets\abstract-user-flat-4.svg" alt="">
-                <h5 class="card-title">B.Hemnath</h5>
-                <h3>212219040046</h3>
-                <span id="present" style="display: none;" class="badge bg-success">Present</span>
-                <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
-              </div>
-              <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
-                <div>
-                  <button onclick="Present()"  type="button" class="btn btn-outline-success btn-sm">Present</button>
-                  <button onclick="Absent()"  type="button" class="btn btn-outline-danger btn-sm">Absent</button>
-                </div>
-                <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
-              <div class="card-header bg-transparen d-flex justify-content-end border-success ">
-                <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
-              </div>
-              <div class="card-body">
-                <img style="width: 50px; height: 50px;" src="assets\abstract-user-flat-4.svg" alt="">
-                <h5 class="card-title">B.Hemnath</h5>
-                <h3>212219040046</h3>
-                <span id="present" style="display: none;" class="badge bg-success">Present</span>
-                <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
-              </div>
-              <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
-                <div>
-                  <button onclick="Present()"  type="button" class="btn btn-outline-success btn-sm ">Present</button>
-                  <button onclick="Absent()"  type="button" class="btn btn-outline-danger btn-sm">Absent</button>
-                </div>
-                <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
-              <div class="card-header bg-transparen d-flex justify-content-end border-success ">
-                <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
-              </div>
-              <div class="card-body">
-                <img style="width: 50px; height: 50px;" src="assets\abstract-user-flat-4.svg" alt="">
-                <h5 class="card-title">B.Hemnath</h5>
-                <h3>212219040046</h3>
-                <span id="present" style="display: none;" class="badge bg-success">Present</span>
-                <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
-              </div>
-              <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
-                <div>
-                  <button onclick="Present()"  type="button" class="btn btn-outline-success btn-sm">Present</button>
-                  <button onclick="Absent()"  type="button" class="btn btn-outline-danger btn-sm">Absent</button>
-                </div>
-                <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
-              <div class="card-header bg-transparen d-flex justify-content-end border-success ">
-                <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
-              </div>
-              <div class="card-body">
-                <img style="width: 50px; height: 50px;" src="assets\abstract-user-flat-4.svg" alt="">
-                <h5 class="card-title">B.Hemnath</h5>
-                <h3>212219040046</h3>
-                <span id="present" style="display: none;" class="badge bg-success ">Present</span>
                 <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
               </div>
               <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
