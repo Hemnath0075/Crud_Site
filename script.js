@@ -25,14 +25,18 @@ function Absent(){
     }
 }
 
+
 const addCard = () =>{
-    const newTaskdeatils = {
+    const newTaskdeatails = {
         imageurl:document.getElementById("imageurl").value,
         studentname:document.getElementById("studentname").value,
-        studentregisternumber:document.getElementById("studentregisternumber").value
+        studentregisternumber:document.getElementById("registernumber").value
     }
+    const cardgeneration=document.getElementById("studentscardgeneration");
+    cardgeneration.insertAdjacentHTML("beforeend",generateCard(newTaskdeatails));
 }
 const generateCard= ({imageurl, studentname,studentregisternumber}) =>{
+    return (
     `<div class="col-md-6 col-lg-3">
         <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
         <div class="card-header bg-transparen d-flex justify-content-end border-success ">
@@ -54,6 +58,11 @@ const generateCard= ({imageurl, studentname,studentregisternumber}) =>{
             <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
         </div>
         </div>
-    </div>`
+    </div>`)
 }
+
+
+
+
+
 

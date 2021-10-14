@@ -38,12 +38,12 @@
                 <label for="exampleInputPassword1" class="form-label">Enter Student Register Number:</label>
                 <input placeholder="eg.2122*******46" type="number" class="form-control" id="registernumber">
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Save changes</button>
+            <button onclick="addCard()" type="button" class="btn btn-primary"data-bs-dismiss="modal">Save changes</button>
           </div>
         </div>
       </div>
@@ -130,29 +130,7 @@
 
       <!-- cardSection -->
       <section class="container-fluid mt-5" id="cards">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="card border-2 mb-3" style="border-color: black; max-width: 20rem;">
-              <div class="card-header bg-transparen d-flex justify-content-end border-success ">
-                <button type="button" class="btn btn-outline-info"><i class="bi bi-pencil-square"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
-              </div>
-              <div class="card-body">
-                <img style="width: 50px; height: 50px;" src="assets\abstract-user-flat-4.svg" alt="">
-                <h5 class="card-title">B.Hemnath</h5>
-                <h3>212219040046</h3>
-                <span id="present" style="display: none;" class="badge bg-success">Present</span>
-                <span id="absent" style="display: none;" class="badge bg-danger">Absent</span>
-              </div>
-              <div class="card-footer d-flex justify-content-between  bg-transparent border-success">
-                <div>
-                  <button onclick="Present()"  type="button" class="btn btn-outline-success btn-sm">Present</button>
-                  <button onclick="Absent()"  type="button" class="btn btn-outline-danger btn-sm">Absent</button>
-                </div>
-                <button type="button" class="btn btn-primary btn-sm">Save Changes</button>
-              </div>
-            </div>
-          </div>
+        <div class="row" id="studentscardgeneration">
         </div>
       </section>
     </main>
